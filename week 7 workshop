@@ -1,0 +1,47 @@
+//Strings in scanf and file i/o //
+
+#include<studio.h>
+#include<string.h>
+//call filei/o//
+// c = c - 65 convert letters to numbers from a=0, b=1...//
+
+char c;
+int ;
+
+c = c - 65;
+
+FILE *fopen(const char *alphabet, const char *w); 
+FILE *input;
+input = fopen("",""0;
+
+if(input == NULL) {
+perror("fopen()");
+return;
+ 
+ int fscanf(FILE *stream, const char *format,);
+ 
+ FILE *stream;
+ // open file etc
+ while(!feof(stream)) {
+ // Read from file
+ // Do stuff
+ }
+ 
+ 
+ 
+ int main(){
+ 
+ char str[];  
+ printf("%s\n", str);
+ scanf("%s", str);
+ 
+// scanf("%c", &c)//
+// printf("%d", (int)c); numerical value probably easiest//
+
+char string[] = "initial value";  //initialising strinng
+
+
+
+
+fscanf()
+fprintf()
