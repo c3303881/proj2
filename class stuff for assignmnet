@@ -1,1 +1,19 @@
+//error opening file message//
+FILE *fopen(const char *alphabet, const char *w); 
+FILE *input;
+input = fopen("",""0;
+if(input == NULL) {
+perror("fopen()");
+return;
 
+
+//string shit//
+int stringLength(char *str);
+
+int main 
+   char str [] = "test string" ;
+   printf(%d , stringLength (str)
+   
+ int stringLength(char*str)
+ int Length = o;
+ ////if else statement/////
