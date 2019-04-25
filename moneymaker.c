@@ -27,6 +27,8 @@ int main() {
     printf("1 = encryption cypher. \n");                            
     printf("2 = decryption cypher. \n");
     scanf("%d", &x);
+    
+    for(i = 0 < 26 && str[i] != '\0')
 
 
 
