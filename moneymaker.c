@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-int i, x, key;
-
+int i, x, key; //key rotation amount
 char c, m; //m=message number
 
 scanf("%c",&c);
 
+//ASCII to ALPHA
 c = c - 65;
 
 char str[26];
@@ -19,6 +19,9 @@ char str[26];
 printf("please enter 'key'\n");
 scanf("%d", &key);
 int main() {
+    
+    printf("please enter string \n");
+    scanf("%s", string)
     //rotation cypher
     printf("please select function. \n");
     printf("1 = encryption cypher. \n");                            
