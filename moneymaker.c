@@ -16,7 +16,7 @@ char str[100];
 //encryption = ((str + key) % 26);
 //decryption eqt for rotation
 //decryption = ((c - key) % 26);
-printf("please enter 'key'\n", key );
+printf("please enter 'key' 0-26 \n", key );
 scanf("%d", &key);
 
 
