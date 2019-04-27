@@ -62,9 +62,10 @@ int main() {
     printf(" '2' rotation decryption \n");
     printf(" '3' substitution encryption \n");
     printf(" '4' substitution decryption \n");
+    printf(" '5' exit \n");
    scanf("%d") 
     
-    switch{
+    switch{                                    //switch case for selection of function 
         case 1: void rotation_enc();
         break;
         case 2: void rotation_dec();
