@@ -29,7 +29,7 @@ void rotation_enc();  //func def
       
          if(str[i] >= 'A' && str[i] <= 'Z'){//values A-Z in ASCII
           //str ='A' + (str +'A' - key) %26;
-         //str[i] = str[i] - key;
+           str[i] = str[i] - key;
          }//moving letters
           if(str[i] < 65){  //only caps needed 
            str[i] = str[i]+26;
@@ -45,12 +45,24 @@ printf("encryption:  %s \n", str);
 
 
 // rotation decryption function
+
 void rotation_dec();
 {
-    int i;
-     for(i = 0; i < str[i]; i++){
-        str[i]= str[i] - key;
+   for(i = 0; i < str[i]; i++){   //count loop identifying end 
+         if(str[i] >= 'A' && str[i] <= 'Z'){//values A-Z in ASCII
+          //str = ((str + key )(% 26));
+         str[i] = str[i] + key;
+         }//moving letters
+          if(str[i] > 90){  //only caps needed 
+           str[i] = str[i]-26;
+           
+              if (str[i] == 58){
+             str[i] = 'char32_t';
+             }
+          }
     }
+    printf("decryption is; %s \n",str);
+
 }
 
 // substitution encryption function
