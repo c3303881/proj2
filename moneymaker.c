@@ -16,28 +16,33 @@ char str[1024];
 //encryption = ((str + key) % 26);
 //decryption eqt for rotation
 //decryption = ((c - key) % 26);
-printf("please enter 'key' 0-26 \n", key );
-scanf("%d", &key);        //reading input of amount of 'key'
+        //reading input of amount of 'key'
 
 
 
 //encryption function
 void rotation_enc();  //func def
 {
+    char str[1024];
     int i;
     for(i = 0; str[i] != '\0'; i++){   //count loop identifying end 
-        
-        if(str[i] >= 65 && str[i] <= 90) //values A-Z in ASCII
-        str[i] = str[i] + key;  //moving letters
+      
+         if(str[i] >= 'A' && str[i] <= 'Z'){//values A-Z in ASCII
+          //str ='A' + (str +'A' - key) %26;
+         //str[i] = str[i] - key;
+         }//moving letters
+          if(str[i] < 65){  //only caps needed 
+           str[i] = str[i]+26;
+           
+             if (str[i] == 58){
+             str[i] = ' ';
+            }
+        }
     }
-    else if(str[i] < 65){  //only caps needed 
-    str[i] = str[i] + 26;
-    if (str[i] < 58){
-        str[i] = '0';
-    }
-}
 printf("encryption:  %s \n", str);
+
 }
+
 
 // rotation decryption function
 void rotation_dec();
@@ -56,6 +61,12 @@ void substitution_dec();
 
 
 int main() {
+    
+    printf("please enter string \n", str);
+    scanf("%s", str)
+    printf("please enter 'key' 0-26 \n", key );
+    scanf("%d", &key);
+    
     // switch case to pick functions
     printf("please choose a function \n" );
     printf(" '1' rotation encryption \n");
@@ -82,8 +93,7 @@ int main() {
     
     
     
-    printf("please enter string \n", str);
-    scanf("%s", str)
+    
     //rotation cypher
    // printf("please select function. \n");
     //printf("1 = encryption cypher. \n");                            
