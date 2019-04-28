@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <strings.h>
-#include <>
-int i, key; //key rotation amount
+#include <ctype.h>
+int i, key, choice; //key rotation amount
 char //m=message number
 
 //scanf("%c",&c);
@@ -86,15 +86,16 @@ int main() {
     scanf("%d", &key);
     
     // switch case to pick functions
+     while(1){
     printf("please choose a function \n" );
     printf(" '1' rotation encryption \n");
     printf(" '2' rotation decryption \n");
     printf(" '3' substitution encryption \n");
     printf(" '4' substitution decryption \n");
     printf(" '5' exit \n");
-   scanf("%d") 
+   scanf("%d", &choice) 
     
-    switch{                                    //switch case for selection of function 
+    switch(choice){                                    //switch case for selection of function 
         case 1: void rotation_enc();
         break;
         case 2: void rotation_dec();
@@ -104,23 +105,8 @@ int main() {
         case 4: void substitution_dec();
         break;
         case 5: exit(0)
+        }
     }
-    
-    
-    
-    
-    
-    
-    
-    //rotation cypher
-   // printf("please select function. \n");
-    //printf("1 = encryption cypher. \n");                            
-   // printf("2 = decryption cypher. \n");
-    //scanf("%d", &x);
-    
-    
-
-
 
   return 0;
 }
