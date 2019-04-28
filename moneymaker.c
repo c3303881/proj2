@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <strings.h>
-int i, x = 0, key; //key rotation amount
+#include <>
+int i, key; //key rotation amount
 char //m=message number
 
 //scanf("%c",&c);
@@ -11,31 +12,22 @@ char //m=message number
 char str[1024];
 //printf("%s\n", str);
 //scanf("%s", str);
- 
-//encryption eqt for rotation
-//encryption = ((str + key) % 26);
-//decryption eqt for rotation
-//decryption = ((c - key) % 26);
-        //reading input of amount of 'key'
 
 
 
 //encryption function
 void rotation_enc();  //func def
 {
-    char str[1024];
-    int i;
     for(i = 0; str[i] != '\0'; i++){   //count loop identifying end 
-      
-         if(str[i] >= 'A' && str[i] <= 'Z'){//values A-Z in ASCII
-          //str ='A' + (str +'A' - key) %26;
+       str = toupper (str[i]- 'A');
+         if(str[i] >= 'A' && str[i] <= 'Z'){//values A-Z in ASCI
            str[i] = str[i] - key;
          }//moving letters
           if(str[i] < 65){  //only caps needed 
            str[i] = str[i]+26;
            
-             if (str[i] == 58){
-             str[i] = ' ';
+             if (str[i] == 32){
+             str[i] = '0';
             }
         }
     }
@@ -50,14 +42,13 @@ void rotation_dec();
 {
    for(i = 0; i < str[i]; i++){   //count loop identifying end 
          if(str[i] >= 'A' && str[i] <= 'Z'){//values A-Z in ASCII
-          //str = ((str + key )(% 26));
          str[i] = str[i] + key;
          }//moving letters
           if(str[i] > 90){  //only caps needed 
            str[i] = str[i]-26;
            
-              if (str[i] == 58){
-             str[i] = 'char32_t';
+              if (str[i] == 32){
+             str[i] = '0';
              }
           }
     }
@@ -66,10 +57,25 @@ void rotation_dec();
 }
 
 // substitution encryption function
-void substitution_enc();
+void substitution_enc();{
+    
+    for ( i = 0; i< str; i++){
+       str = toupper(str[i])-'A';
+       if(str[i] >= 65 && str[i] <=90){
+           str[i] = encrypted[str[i]];
+       }else{
+           str[i]= str[i]
+       }
+   }
+    
+    char encrypted[26] = {'B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','A'};
+}
 
 // substitution decryption function
-void substitution_dec();
+void substitution_dec();{
+    
+    char encrypted[26] = {'B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','A'};
+}
 
 
 int main() {
