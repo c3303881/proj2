@@ -30,15 +30,15 @@ char str[1024];
 void rotation_enc();  //func def
 {
     for(i = 0; str[i] != '\0'; i++){   //count loop identifying end 
-       str = toupper (str[i]- 'A');    //toupper function to convert lowercase letters to upper
+       str[i] = toupper (str[i]);    //toupper function to convert lowercase letters to upper
          if(str[i] >= 'A' && str[i] <= 'Z'){//values A-Z in ASCI     
            str[i] = str[i] - key;                                      // couldnt figure out computation with % 26, using loop
          }//moving letters                                             //counting between 65-90 ascii values A and Z
           if(str[i] < 65){  //only caps needed 
            str[i] = str[i]+26;
            
-             if (str[i] == '32'){     //if character in string is equal to ascii 32 print space
-             str[i] = ' ';
+             if (str == '32'){     //if character in string is equal to ascii 32 print space
+             str[i] = "space";
             }
         }
     }
@@ -58,8 +58,8 @@ void rotation_dec();
           if(str[i] > 90){  //only caps needed 
            str[i] = str[i]-26;
            
-              if (str[i] == '32'){
-             str[i] = ' ';
+              if (str == '32'){
+             str[i] = "space";
              }
           }
     }
@@ -67,10 +67,12 @@ void rotation_dec();
 
 }
 //BOTH ROTATION ENCRYPTION AND DECRYPTION WORK ON THEIR OWN
-// WITH INCLUSION OF  printf("please enter string \n", str);
-  // scanf("%s", str)
-  //  printf("please enter 'key' 0-26 \n", key );
-  //  scanf("%d", &key);
+// WITH INCLUSION OF  int i, key;
+    //char str[1024];
+    //printf("please enter string \n");
+   //scanf("%s", str);
+   // printf("please enter 'key' 0-26 \n");
+   //scanf("%d", &key);
  // IN THE MAIN
 
 // substitution encryption function
